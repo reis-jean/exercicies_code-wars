@@ -6,6 +6,7 @@
 # Your method should return true, if the strings are equal and false if they are not equal.
 
 def compare(s1, s2):
+    print(s1, s2)
 
     def is_number(value):
         return isinstance(value, (int, float))
@@ -30,10 +31,15 @@ def compare(s1, s2):
                 caracte2 = caracte2 + ord(i.upper())
     else:
         caracte2 = 0
+    
+    print(caracte1, caracte2)
+
     if caracte1 == 0 or caracte2 == 0:
         return True
-    else: 
-        return caracte1 == caracte2
+    elif caracte1 == caracte2: 
+        return True
+    else:
+        return False
     
         
 compare('AD', 'BC')
@@ -43,4 +49,9 @@ compare("ZzZz", "ffPFF")
 compare("ZzZz", "ffPFF")
 compare("kl", "lz" )
 compare('null', "" )
+compare('K' , [75] )
+compare([68, 84, 83, 76, 82] , 'RPQSC' )
+compare([71, 74, 76] , 'LEL')
+compare('YNW' , [83, 82, 89])
+compare('L' , [76])
 
